@@ -8,10 +8,10 @@ The easiest way to get NugServer up and running is to use the docker image. Or y
 ### Docker
 I don't know how to push the same tag for multiple operating systems so you'll have to pull the correct image for your OS.
 
-#### Linux
+#### Linux Image
 `docker run --publish 5555:8080 -v /nugserver:/app/data --env NUG_URL=http://localhost:5555 --name nugserver -d rebinf/nugserver:latest`
 
-#### Windows
+#### Windows Image
 `docker run --publish 5555:8080 -v C:\nugserver:/app/data --env NUG_URL=http://localhost:5555 --name nugserver -d rebinf/nugserver-win:latest`
 
 ### Settings/Environment Variables
