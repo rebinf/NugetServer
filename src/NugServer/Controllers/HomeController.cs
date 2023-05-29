@@ -73,6 +73,11 @@ namespace NugServer.Controllers
         [Route($"{RouteIds.PackagePublish}/{{packageId}}/{{version}}")]
         public IActionResult DeletePackage(string packageId, string version)
         {
+            if (!Request.Headers.TryGetValue("X-NuGet-ApiKey", out StringValues apiKey) || apiKey != PackageManager.Options.ApiKey)
+            {
+                return Unauthorized();
+            }
+
             PackageManager.DeletePackage(packageId, version);
 
             return Ok();
