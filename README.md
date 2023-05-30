@@ -12,7 +12,7 @@ I don't know how to push the same tag for multiple operating systems so you'll h
 `docker run --publish 5555:8080 -v /nugserver:/app/data --env NUG_URL=http://localhost:5555 --name nugserver -d rebinf/nugserver:latest`
 
 #### Windows Image
-`docker run --publish 5555:8080 -v C:\nugserver:/app/data --env NUG_URL=http://localhost:5555 --name nugserver -d rebinf/nugserver-win:latest`
+`docker run --publish 5555:80 -v C:\nugserver:C:/app/data --env NUG_URL=http://localhost:5555 --name nugserver -d rebinf/nugserver-win:latest`
 
 ### Settings/Environment Variables
 You can set the following environment variables to configure the server:
