@@ -11,6 +11,11 @@
         public string BaseUrl { get; set; } = "http://localhost:5078";
 
         /// <summary>
+        /// Gets or sets a value indicating whether to require an API key for publishing or deleting packages.
+        /// </summary>
+        public bool RequireApiKey { get; set; } = false;
+
+        /// <summary>
         /// Gets or sets the API key for the NugServer.
         /// </summary>
         public string ApiKey = "1234567890";

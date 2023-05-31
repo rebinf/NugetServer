@@ -14,10 +14,13 @@ namespace NugServer.Controllers
 
         public static PackageManager PackageManager { get; set; }
 
+        public IOptions<NugServerOptions> Options { get; }
+
         public HomeController(IOptions<NugServerOptions> options)
         {
             ServiceIndex ??= ServiceIndex.GetFullServiceIndex(options.Value.BaseUrl);
             PackageManager ??= new PackageManager(options.Value);
+            Options = options;
         }
 
         [HttpGet]
@@ -52,9 +55,12 @@ namespace NugServer.Controllers
         [Route(RouteIds.PackagePublish)]
         public IActionResult PublishPackage()
         {
-            if (!Request.Headers.TryGetValue("X-NuGet-ApiKey", out StringValues apiKey) || apiKey != PackageManager.Options.ApiKey)
+            if (Options.Value.RequireApiKey)
             {
-                return Unauthorized();
+                if (!Request.Headers.TryGetValue("X-NuGet-ApiKey", out StringValues apiKey) || apiKey != PackageManager.Options.ApiKey)
+                {
+                    return Unauthorized();
+                }
             }
 
             var file = Request.Form.Files.FirstOrDefault();
@@ -73,9 +79,12 @@ namespace NugServer.Controllers
         [Route($"{RouteIds.PackagePublish}/{{packageId}}/{{version}}")]
         public IActionResult DeletePackage(string packageId, string version)
         {
-            if (!Request.Headers.TryGetValue("X-NuGet-ApiKey", out StringValues apiKey) || apiKey != PackageManager.Options.ApiKey)
+            if (Options.Value.RequireApiKey)
             {
-                return Unauthorized();
+                if (!Request.Headers.TryGetValue("X-NuGet-ApiKey", out StringValues apiKey) || apiKey != PackageManager.Options.ApiKey)
+                {
+                    return Unauthorized();
+                }
             }
 
             PackageManager.DeletePackage(packageId, version);

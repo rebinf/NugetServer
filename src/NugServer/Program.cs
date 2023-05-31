@@ -50,6 +50,11 @@ namespace NugServer
                 configuration[nameof(NugServerOptions.BaseUrl)] = url;
             }
 
+            if (Environment.GetEnvironmentVariable("REQ_KEY") is string reqKey)
+            {
+                configuration[nameof(NugServerOptions.RequireApiKey)] = reqKey;
+            }
+
             if (Environment.GetEnvironmentVariable("API_KEY") is string apiKey)
             {
                 configuration[nameof(NugServerOptions.ApiKey)] = apiKey;
@@ -78,6 +83,11 @@ namespace NugServer
             if (args.FirstOrDefault(x => x.StartsWith("--NUG_URL=", StringComparison.OrdinalIgnoreCase)) is string url)
             {
                 configuration[nameof(NugServerOptions.BaseUrl)] = url["--NUG_URL=".Length..];
+            }
+
+            if (args.FirstOrDefault(x => x.StartsWith("--REQ_KEY=", StringComparison.OrdinalIgnoreCase)) is string reqKey)
+            {
+                configuration[nameof(NugServerOptions.RequireApiKey)] = reqKey["--REQ_KEY=".Length..];
             }
 
             if (args.FirstOrDefault(x => x.StartsWith("--API_KEY=", StringComparison.OrdinalIgnoreCase)) is string apiKey)

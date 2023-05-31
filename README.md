@@ -3,7 +3,7 @@
 Very simple and minimal v3 nuget server. Ideal for hosting internal nuget packages.
 
 ## Installation
-The easiest way to get NugServer up and running is to use the docker image. Or you can download the compiled version and run it behid IIS, Nginx etc...
+The easiest way to get NugServer up and running is to use the docker image. Or you can download the compiled version and run it behind IIS, Nginx etc...
 
 ### Docker
 I don't know how to push the same tag for multiple operating systems so you'll have to pull the correct image for your OS.
@@ -19,6 +19,8 @@ You can set the following environment variables to configure the server:
 
 `NUG_URL`: Base URL for the NugServer.
 
+`REQ_KEY`: Whether to require an API key for publishing or deleting packages.
+
 `API_KEY`: API key for the NugServer.
 
 `DEL_ALL`: Whether to delete previous versions of the uploaded package on publish.
@@ -33,7 +35,7 @@ You can set the following environment variables to configure the server:
 ### appsettings.json
 You can set these variables in the `appsettings.json` file.
 
-## Uage
+## Usage
 ### Setup
 Add your nuget server url to to your nuget.config or Visual Studio. Url format will be:\
 `{YOUR_SERVER_URL}/v3/index.json`.

@@ -20,6 +20,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 ENV NUG_URL="http://localhost:5078"
+ENV REQ_KEY="false"
 ENV API_KEY="1234567890"
 ENV DEL_ALL="false"
 ENV DEL_MIN="false"
