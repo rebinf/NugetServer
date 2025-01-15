@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NugServer
+namespace NugetServer
 {
     /// <summary>
     /// Represents the result of an operation.

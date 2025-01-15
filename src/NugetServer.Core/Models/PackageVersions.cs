@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NugServer.Models
+namespace NugetServer.Models
 {
     /// <summary>
     /// Represents a collection of package versions.

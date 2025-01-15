@@ -1,15 +1,15 @@
-﻿using NugServer.Extensions;
-using NugServer.Models;
-using NugServer.Utilities;
+﻿using NugetServer.Extensions;
+using NugetServer.Models;
+using NugetServer.Utilities;
 using System;
 
-namespace NugServer
+namespace NugetServer
 {
     public class PackageManager
     {
-        public NugServerOptions Options { get; }
+        public NugetServerOptions Options { get; }
 
-        public PackageManager(NugServerOptions options)
+        public PackageManager(NugetServerOptions options)
         {
             Options = options;
         }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace NugServer.Models
+namespace NugetServer.Models
 {
     /// <summary>
     /// Represents a registration object.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NugServer
+namespace NugetServer
 {
     public static class RouteIds
     {

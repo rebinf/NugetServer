@@ -1,12 +1,12 @@
-﻿namespace NugServer
+﻿namespace NugetServer
 {
     /// <summary>
-    /// Represents the options for the NugServer.
+    /// Represents the options for the NugetServer.
     /// </summary>
-    public class NugServerOptions
+    public class NugetServerOptions
     {
         /// <summary>
-        /// Gets or sets the base URL for the NugServer.
+        /// Gets or sets the base URL for the NugetServer.
         /// </summary>
         public string BaseUrl { get; set; } = "http://localhost:5078";
 
@@ -16,7 +16,7 @@
         public bool RequireApiKey { get; set; } = false;
 
         /// <summary>
-        /// Gets or sets the API key for the NugServer.
+        /// Gets or sets the API key for the NugetServer.
         /// </summary>
         public string ApiKey = "1234567890";
 

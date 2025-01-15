@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text.Json.Serialization;
 
-namespace NugServer.Models
+namespace NugetServer.Models
 {
     /// <summary>
     /// Registration Leaf

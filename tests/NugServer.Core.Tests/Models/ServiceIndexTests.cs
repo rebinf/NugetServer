@@ -1,4 +1,4 @@
-﻿using NugServer.Models;
+﻿using NugetServer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace NugServer.Tests.Models
+namespace NugetServer.Tests.Models
 {
     public class ServiceIndexTests
     {

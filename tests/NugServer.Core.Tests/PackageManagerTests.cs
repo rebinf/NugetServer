@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace NugServer.Tests
+namespace NugetServer.Tests
 {
     public class PackageManagerTests : IDisposable
     {
         private List<string> _tempFiles = new List<string>();
 
-        private static NugServerOptions Options = new NugServerOptions
+        private static NugetServerOptions Options = new NugetServerOptions
         {
             PackagesPath = Path.Combine(AppContext.BaseDirectory, "data", "packages")
         };

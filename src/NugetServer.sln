@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33711.374
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugServer.Core", "NugServer.Core\NugServer.Core.csproj", "{EC490853-ADB4-4B5E-B56F-772DA2AAF0CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetServer.Core", "NugetServer.Core\NugetServer.Core.csproj", "{EC490853-ADB4-4B5E-B56F-772DA2AAF0CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BBDA0DE9-FD5D-4871-B1EF-E70F4F992BA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugServer.Core.Tests", "..\tests\NugServer.Core.Tests\NugServer.Core.Tests.csproj", "{96302AD8-9888-446F-B339-D5ED657D65D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetServer.Core.Tests", "..\tests\NugetServer.Core.Tests\NugetServer.Core.Tests.csproj", "{96302AD8-9888-446F-B339-D5ED657D65D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugServer", "NugServer\NugServer.csproj", "{D5D8BA1A-14EA-4D5F-B4A7-43C1775736CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetServer", "NugetServer\NugetServer.csproj", "{D5D8BA1A-14EA-4D5F-B4A7-43C1775736CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

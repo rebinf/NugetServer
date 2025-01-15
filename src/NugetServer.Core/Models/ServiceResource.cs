@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text.Json.Serialization;
 
-namespace NugServer.Models
+namespace NugetServer.Models
 {
     /// <summary>
     /// Represents a versioned capability of a package source.

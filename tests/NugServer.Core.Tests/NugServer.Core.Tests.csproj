@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\NugServer\NugServer.csproj" />
+    <ProjectReference Include="..\..\src\NugetServer\NugetServer.csproj" />
   </ItemGroup>
 
 </Project>

@@ -30,7 +30,7 @@ jobs:
       - name: zip release
         run: |
           cd src/publish
-          zip -r ./../NugServer.zip ./*
+          zip -r ./../NugetServer.zip ./*
 
       - name: create release
         id: create_release
@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v1.0.${{github.run_number}}
-          release_name: NugServer v1.0.${{github.run_number}}
+          release_name: NugetServer v1.0.${{github.run_number}}
           draft: false
           prerelease: false
   
@@ -50,8 +50,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./src/NugServer.zip
-          asset_name: NugServer.zip
+          asset_path: ./src/NugetServer.zip
+          asset_name: NugetServer.zip
           asset_content_type: application/zip
       
   docker-ubuntu:
@@ -68,8 +68,8 @@ jobs:
       - name: Build and push
         run: |
           cd src
-          docker build . --file ./NugServer/Dockerfile -t rebinf/nugserver:1.0.${{github.run_number}} -t rebinf/nugserver:latest
-          docker image push --all-tags rebinf/nugserver
+          docker build . --file ./NugetServer/Dockerfile -t rebinf/nugetserver:1.0.${{github.run_number}} -t rebinf/nugetserver:latest
+          docker image push --all-tags rebinf/nugetserver
 
   docker-win:
     runs-on: windows-2019
@@ -85,5 +85,5 @@ jobs:
       - name: Build and push
         run: |
           cd src
-          docker build . --file ./NugServer/Dockerfile -t rebinf/nugserver-win:1.0.${{github.run_number}} -t rebinf/nugserver-win:latest
-          docker image push --all-tags rebinf/nugserver-win
+          docker build . --file ./NugetServer/Dockerfile -t rebinf/nugetserver-win:1.0.${{github.run_number}} -t rebinf/nugetserver-win:latest
+          docker image push --all-tags rebinf/nugetserver-win

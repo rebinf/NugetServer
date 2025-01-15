@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
-using NugServer;
-using NugServer.Models;
+using NugetServer;
+using NugetServer.Models;
 
-namespace NugServer.Controllers
+namespace NugetServer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -14,9 +14,9 @@ namespace NugServer.Controllers
 
         public static PackageManager PackageManager { get; set; }
 
-        public IOptions<NugServerOptions> Options { get; }
+        public IOptions<NugetServerOptions> Options { get; }
 
-        public HomeController(IOptions<NugServerOptions> options)
+        public HomeController(IOptions<NugetServerOptions> options)
         {
             ServiceIndex ??= ServiceIndex.GetFullServiceIndex(options.Value.BaseUrl);
             PackageManager ??= new PackageManager(options.Value);

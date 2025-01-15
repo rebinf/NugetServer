@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace NugServer.Models
+namespace NugetServer.Models
 {
     /// <summary>
     /// A JSON document that is the entry point for a NuGet package source and allows a client implementation to discover the package source's capabilities.
