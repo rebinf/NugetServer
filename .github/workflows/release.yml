@@ -95,6 +95,6 @@ jobs:
       - name: Build and push
         run: |
           cd src
-          docker build . --file ./NugetServer/Dockerfile -t rebinf/nugetserver:1.0.${{github.run_number}} -t rebinf/nugetserver-win:latest
+          docker build . --file ./NugetServer/Dockerfile -t rebinf/nugetserver-win:1.0.${{github.run_number}} -t rebinf/nugetserver-win:latest
           docker image push --all-tags rebinf/nugetserver-win
 
