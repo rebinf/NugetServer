@@ -11,9 +11,6 @@ I don't know how to push the same tag for multiple operating systems so you'll h
 #### Linux Image
 `docker run --publish 5555:8080 -v /nugetserver:/app/data --env NUG_URL=http://localhost:5555 --name nugetserver -d rebinf/nugetserver:latest`
 
-#### Windows Image
-`docker run --publish 5555:80 -v C:\nugetserver:C:/app/data --env NUG_URL=http://localhost:5555 --name nugetserver -d rebinf/nugetserver-win:latest`
-
 ### Settings/Environment Variables
 You can set the following environment variables to configure the server:
 
@@ -30,7 +27,7 @@ You can set the following environment variables to configure the server:
 `DEL_PRE`: Whether to delete previous preview versions of the uploaded package on publish.
 
 ### Use with docker
-`docker run --publish 5555:80 --env NUG_URL=http://localhost:5555 --env API_KEY=1234567890 --name nugetserver -d rebinf/nugetserver-win:latest`
+`docker run --publish 5555:8080 --env NUG_URL=http://localhost:5555 --env API_KEY=1234567890 --name nugetserver -d rebinf/nugetserver-win:latest`
 
 ### appsettings.json
 You can set these variables in the `appsettings.json` file.
